@@ -9,6 +9,7 @@ GPIO.setmode(GPIO.BCM)
 led = 2
 switch = 3
 
+#inicializacion de los pines
 GPIO.setup(led, GPIO.OUT)
 GPIO.setup(switch, GPIO.IN, GPIO.PUD_UP)
 

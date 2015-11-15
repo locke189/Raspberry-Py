@@ -1,7 +1,7 @@
 import RPi.GPIO as GPIO
 import time
 
-#inicializacion del dispositivo
+#inicializacion del dtrispositivo
 GPIO.cleanup()
 GPIO.setmode(GPIO.BCM)
 
@@ -24,14 +24,12 @@ while x == 0:
 	
 	if GPIO.input(switch) == True:
 		time.sleep(1)
-	else:
-		time.sleep(0.5)
 	
-	if led_state == ON:
-		led_state = OFF
-	else:
-		led_state = ON
-		
+		if led_state == ON:
+			led_state = OFF
+		else:
+			led_state = ON
+			
 	GPIO.output(led, led_state)
 	
 
